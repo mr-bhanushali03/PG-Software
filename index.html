@@ -15,24 +15,7 @@
     <meta name="keyword" content="bootstrap admin template" />
 
     <!--[ Favicon]-->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/apple-touch-icon.png"
-    />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
     <link rel="stylesheet" href="assets/vendor/dataTables.min.css" />
 
@@ -55,7 +38,7 @@
             id="offcanvas_Navbar"
           >
             <div class="offcanvas-header">
-              <span class="fw-bold fs-5 text-gradient">HotelAir</span>
+              <span class="fw-bold fs-5 text-gradient">Pride Living</span>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -71,7 +54,7 @@
                   alt="avatar"
                 />
                 <div class="ms-3 mt-1">
-                  <h4 class="mb-0 text-gradient title-font">HotelAir</h4>
+                  <h4 class="mb-0 text-gradient title-font">Pride Living</h4>
                   <span class="text-muted">Super Admin</span>
                 </div>
               </div>
@@ -573,31 +556,77 @@
               <!--[ Start:: Brand Logo icon ]-->
               <a
                 href="index.html"
-                class="brand-icon text-decoration-none d-flex align-items-center"
+                class="brand-icon text-decoration-none d-flex align-items-center ms-3"
                 title="HotelAir Admin Template"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  viewBox="0 0 32 32"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  <!-- Define gradients -->
+                  <defs>
+                    <!-- Gradient for the text -->
+                    <linearGradient
+                      id="textGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #8057c7; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #e05170; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                    <!-- Gradient for the box border -->
+                    <linearGradient
+                      id="borderGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #8057c7; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #e05170; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Square box with gradient border -->
+                  <rect
+                    x="1"
+                    y="1"
+                    width="30"
+                    height="30"
+                    rx="5"
+                    ry="5"
+                    fill="none"
+                    stroke="url(#borderGradient)"
+                    stroke-width="2"
                   />
-                  <path d="M9 8l0 8" />
-                  <path d="M9 12l6 0" />
-                  <path d="M15 8l0 8" />
+
+                  <!-- Apply the gradient to the text -->
+                  <text
+                    x="6"
+                    y="22"
+                    font-family="Arial, Helvetica, sans-serif"
+                    font-size="16"
+                    fill="url(#textGradient)"
+                  >
+                    PL
+                  </text>
                 </svg>
-                <span
-                  class="fw-bold ps-2 fs-5 d-none d-xl-inline-flex text-gradient"
-                  >HotelAir</span
-                >
               </a>
             </div>
             <form
