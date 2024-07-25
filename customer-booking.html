@@ -389,7 +389,7 @@
                         <li>
                           <a
                             class="active"
-                            href="cab-booking.html"
+                            href="customer-booking.html"
                             aria-label="Cab Booking"
                             >Cab Booking</a
                           >
@@ -1326,7 +1326,7 @@
                     >Room Booking</a
                   >
                   <a
-                    href="cab-booking.html"
+                    href="customer-booking.html"
                     class="tag-link rounded-pill border px-3"
                     style="--hover-color: var(--theme-color1)"
                     >Cab Booking</a
@@ -2038,14 +2038,14 @@
               >
                 <h3 class="fw-bold mb-0">Customer Booking</h3>
                 <div class="col-auto d-flex w-sm-100">
-                  <button
-                    type="button"
-                    class="btn btn-dark"
-                    data-bs-toggle="modal"
-                    data-bs-target="#add-booking"
+                  <a href="create-customer.html">
+                    <button
+                      type="button"
+                      class="btn btn-dark btn-set-task w-sm-100"
+                    >
+                      Add Customer Booking
+                    </button></a
                   >
-                    Add Cab Booking
-                  </button>
                 </div>
               </div>
             </div>
@@ -2053,78 +2053,56 @@
               <div class="card">
                 <div class="card-body">
                   <table
-                    class="table dataTable align-middle table-hover table-body"
-                    style="width: 100%"
+                    id="myProjectTable"
+                    class="table table-hover align-middle mb-0 w-100"
                   >
                     <thead>
                       <tr>
-                        <th>Id</th>
+                        <th>Customer Id</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Contact</th>
-                        <th>Aadhar Photo</th>
-                        <th>Police Verification Photo</th>
-                        <th>Aadhar Card No</th>
-                        <th>Family Member Name</th>
-                        <th>Family Member Contact Number</th>
-                        <th>Date of Birth</th>
-                        <th>Agreement PDF</th>
-                        <th>Joining Date</th>
-                        <th>Booking Amount</th>
-                        <th>Permanent Address</th>
-                        <th>College Name</th>
-                        <th>College Address</th>
+                        <!-- <th>Status</th> -->
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>01</td>
-                        <td>John Doe</td>
-                        <td>john.doe@example.com</td>
-                        <td>9876543210</td>
                         <td>
-                          <img
-                            src="path/to/aadhar_photo.jpg"
-                            alt="Aadhar Photo"
-                            width="50"
-                            height="50"
-                          />
+                          <a href="employee-profile.html" class="text-accent"
+                            >#EMP : 00001</a
+                          >
                         </td>
                         <td>
                           <img
-                            src="path/to/police_verification_photo.jpg"
-                            alt="Police Verification Photo"
-                            width="50"
-                            height="50"
+                            class="avatar rounded-circle"
+                            src="assets/images/xs/avatar1.jpg"
+                            alt=""
                           />
+                          <span class="fw-bold ms-1">Frank Baker</span>
                         </td>
-                        <td>1234-5678-9012</td>
-                        <td>Jane Doe</td>
-                        <td>9876543211</td>
-                        <td>1998-07-23</td>
+                        <td>CasualLeave@gmail.com</td>
+                        <td>1234567890</td>
+                        <!-- <td>Active</td> -->
                         <td>
-                          <a href="path/to/agreement.pdf" target="_blank"
-                            >View PDF</a
-                          >
-                        </td>
-                        <td>2024-01-21</td>
-                        <td>5000.00</td>
-                        <td>123 Main St, Hometown</td>
-                        <td>Example College</td>
-                        <td>456 College Ave, College Town</td>
-                        <td>
-                          <button
-                            type="button"
-                            class="btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#edit-student"
-                          >
-                            <i class="bi bi-pencil-square"></i>
-                          </button>
-                          <button type="button" class="btn deleterow">
-                            <i class="bi bi-trash text-danger"></i>
-                          </button>
+                          <div class="btn-group" role="group">
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editModal"
+                            >
+                              <i class="bi bi-pencil-square"></i> Edit
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary deleterow"
+                              data-bs-toggle="modal"
+                              data-bs-target="#deleteModal"
+                            >
+                              <i class="bi bi-trash"></i> Delete
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -2311,84 +2289,6 @@
       </div>
     </div>
 
-    <!-- Add Booking-->
-    <div class="modal fade" id="add-booking" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">Add Cab Booking</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Car</label>
-                <select class="form-select">
-                  <option selected>Choose Car</option>
-                  <option value="1">Innova</option>
-                  <option value="2">XUV 700</option>
-                  <option value="3">Maruti 800</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Customer Name</label>
-                <select class="form-select">
-                  <option selected>Choose Name</option>
-                  <option value="1">Jemmy</option>
-                  <option value="2">Max</option>
-                  <option value="3">Eden</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Cab Number</label>
-                <select class="form-select">
-                  <option selected>Choose Cab Number</option>
-                  <option value="1">AB-GB-0158</option>
-                  <option value="2">AB-GB-1158</option>
-                  <option value="3">AB-GB-1111</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Driver</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Driver Name"
-                />
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Transportation Type</label>
-                <select class="form-select">
-                  <option selected>Choose Cab Number</option>
-                  <option value="1">Pick Up</option>
-                  <option value="2">Drop</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Transportation Time</label>
-                <input type="time" class="form-control" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Edit Booking-->
     <div class="modal fade" id="edit-booking" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
@@ -2473,12 +2373,10 @@
     <script src="assets/js/main.js"></script>
     <script>
       $(document).ready(function () {
-        $(".dataTable").addClass("nowrap").dataTable({
+        $("#myProjectTable").addClass("nowrap").dataTable({
           responsive: true,
         });
       });
     </script>
   </body>
-
-  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/cab-booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 16:17:09 GMT -->
 </html>
