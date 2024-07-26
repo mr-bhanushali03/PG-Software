@@ -8,18 +8,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta
-      name="description"
-      content="Responsive Bootstrap 5 admin dashboard template & web App ui kit."
-    />
-    <meta name="keyword" content="bootstrap admin template" />
+    <meta name="description" content="Pride Living />
+    <meta name="keyword" content="Pride Living" />
 
     <!--[ Favicon]-->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
     <!--[ Template main css file ]-->
     <link rel="stylesheet" href="assets/css/style.min.css" />
-    <link rel="stylesheet" href="../assets/css/flatpickr.min.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
@@ -1265,6 +1265,7 @@
             </li>
           </ol>
         </div>
+
         <!-- start: page body area -->
         <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
           <div class="row g-4">
@@ -1276,7 +1277,7 @@
                   </h6>
                 </div>
                 <div class="card-body">
-                  <form class="row g-3">
+                  <form class="row g-3" method="post" action="javascript:void(0)" enctype="multipart/form-data">
                     <!-- First Name -->
                     <div class="col-md-4 col-12">
                       <label class="col-form-label">First Name</label>
@@ -1287,6 +1288,7 @@
                           type="text"
                           class="form-control"
                           name="first_name"
+                          autocomplete="off"
                           required
                         />
                         <div class="form-icon position-absolute">
@@ -1305,6 +1307,8 @@
                           type="text"
                           class="form-control"
                           name="middle_name"
+                          autocomplete="off"
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-person"></i>
@@ -1322,6 +1326,7 @@
                           type="text"
                           class="form-control"
                           name="last_name"
+                          autocomplete="off"
                           required
                         />
                         <div class="form-icon position-absolute">
@@ -1340,6 +1345,7 @@
                           type="email"
                           class="form-control"
                           name="email"
+                          autocomplete="off"
                           required
                         />
                         <div class="form-icon position-absolute">
@@ -1358,6 +1364,7 @@
                           type="text"
                           class="form-control phone-number"
                           name="contact"
+                          autocomplete="off"
                           required
                         />
                         <div class="form-icon position-absolute">
@@ -1378,6 +1385,8 @@
                           type="text"
                           class="form-control"
                           name="emergency_name"
+                          autocomplete="off"
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-person"></i>
@@ -1397,6 +1406,8 @@
                           type="text"
                           class="form-control phone-number"
                           name="emergency_contact"
+                          autocomplete="off"
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-telephone"></i>
@@ -1410,7 +1421,7 @@
                       <fieldset
                         class="form-icon-group left-icon position-relative"
                       >
-                        <select class="form-select ps-4" name="gender">
+                        <select class="form-select ps-4" name="gender" required>
                           <option value="">Select Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
@@ -1432,6 +1443,8 @@
                           type="date"
                           class="form-control"
                           name="date_of_birth"
+                          autocomplete="off"
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-calendar"></i>
@@ -1440,61 +1453,69 @@
                     </div>
 
                     <!-- Country -->
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12 mb-3">
                       <label class="col-form-label">Country</label>
                       <fieldset
                         class="form-icon-group left-icon position-relative"
                       >
-                        <input
-                          type="text"
-                          class="form-control"
+                        <select
+                          class="form-select ps-4 countries"
+                          id="countrySelect"
                           name="country"
-                        />
-                        <div class="form-icon position-absolute">
+                        >
+                          <option value="">Select a country</option>
+                          <!-- Options will be populated dynamically -->
+                        </select>
+                        <div
+                          class="form-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+                        >
                           <i class="bi bi-globe"></i>
                         </div>
                       </fieldset>
                     </div>
 
                     <!-- State -->
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12 mb-3">
                       <label class="col-form-label">State</label>
                       <fieldset
                         class="form-icon-group left-icon position-relative"
                       >
-                        <input type="text" class="form-control" name="state" />
-                        <div class="form-icon position-absolute">
+                        <select
+                          class="form-select ps-4 states"
+                          id="stateSelect"
+                          name="state"
+                          disabled
+                        >
+                          <option value="">Select a state</option>
+                          <!-- Options will be populated dynamically -->
+                        </select>
+                        <div
+                          class="form-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+                        >
                           <i class="bi bi-geo-alt"></i>
                         </div>
                       </fieldset>
                     </div>
 
                     <!-- City -->
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12 mb-3">
                       <label class="col-form-label">City</label>
                       <fieldset
                         class="form-icon-group left-icon position-relative"
                       >
-                        <input type="text" class="form-control" name="city" />
-                        <div class="form-icon position-absolute">
+                        <select
+                          class="form-select ps-4 cities"
+                          id="citySelect"
+                          name="city"
+                          disabled
+                        >
+                          <option value="">Select a city</option>
+                          <!-- Options will be populated dynamically -->
+                        </select>
+                        <div
+                          class="form-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+                        >
                           <i class="bi bi-house-door"></i>
-                        </div>
-                      </fieldset>
-                    </div>
-
-                    <!-- ZIP Code -->
-                    <div class="col-md-3 col-12">
-                      <label class="col-form-label">ZIP Code</label>
-                      <fieldset
-                        class="form-icon-group left-icon position-relative"
-                      >
-                        <input
-                          type="number"
-                          class="form-control"
-                          name="zip_code"
-                        />
-                        <div class="form-icon position-absolute">
-                          <i class="bi bi-postage"></i>
                         </div>
                       </fieldset>
                     </div>
@@ -1508,7 +1529,9 @@
                         <textarea
                           class="form-control"
                           name="full_address"
-                          rows="3"
+                          rows="1"
+                          autocomplete="off"
+                          required
                         ></textarea>
                         <div class="form-icon position-absolute">
                           <i class="bi bi-file-text"></i>
@@ -1517,12 +1540,17 @@
                     </div>
 
                     <!-- Disability Status -->
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-12 col-12 disability-container">
                       <label class="col-form-label">Disability</label>
                       <fieldset
                         class="form-icon-group left-icon position-relative"
                       >
-                        <select class="form-select ps-4" name="disability">
+                        <select
+                          class="form-select ps-4"
+                          name="disability"
+                          id="disabilitySelect"
+                          required
+                        >
                           <option value="">Select</option>
                           <option value="yes">Yes</option>
                           <option value="no">No</option>
@@ -1534,7 +1562,10 @@
                     </div>
 
                     <!-- Disability Description -->
-                    <div class="col-md-6 col-12">
+                    <div
+                      class="col-md-6 col-12 disability-description"
+                      style="display: none"
+                    >
                       <label class="col-form-label"
                         >Disability Description</label
                       >
@@ -1562,7 +1593,7 @@
                           type="date"
                           class="form-control booking-date flatpickr-input"
                           name="booking_date"
-                          readonly
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-calendar-check"></i>
@@ -1580,7 +1611,7 @@
                           type="date"
                           class="form-control joining_date flatpickr-input"
                           name="joining_date"
-                          readonly
+                          required
                         />
                         <div class="form-icon position-absolute">
                           <i class="bi bi-calendar-plus"></i>
@@ -1619,7 +1650,6 @@
                 </div>
                 <div class="card-body">
                   <form class="row g-3" enctype="multipart/form-data">
-
                     <!-- Document Type -->
                     <div class="col-md-6 col-12">
                       <label class="col-form-label">Document Type</label>
@@ -1852,24 +1882,127 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Disable form submissions if there are invalid fields
+      $(function () {
+        $("#disabilitySelect")
+          .change(function () {
+            const isYes = $(this).val() === "yes";
+            $(".disability-description").toggle(isYes);
+            $(".disability-container")
+              .toggleClass("col-md-6", isYes)
+              .toggleClass("col-md-12", !isYes);
+          })
+          .change(); // Trigger change to apply initial state
+      });
 
-    <!--[ hotelair template vender js ]-->
-    <script src="../assets/bundles/libscripts.bundle.js"></script>
-    <script src="../assets/bundles/prism.bundle.js"></script>
-    <script src="../assets/bundles/inputmask.bundle.js"></script>
-    <script src="../assets/bundles/select2.bundle.js"></script>
-    <script src="../assets/bundles/flatpickr.bundle.js"></script>
-    <script >
-        $(".booking-date").flatpickr({
-            altInput: true,
-			altFormat: "F j, Y",
-			dateFormat: "Y-m-d",
+      // Country, State, City dropdown
+      $(document).ready(function () {
+        // Load countries
+        $.ajax({
+          url: "data/countries.php",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            var $countrySelect = $("#countrySelect");
+            $countrySelect
+              .empty()
+              .append('<option value="">Select a country</option>');
+            $.each(data.countries, function (i, country) {
+              $countrySelect.append(
+                '<option value="' +
+                  country.code +
+                  '">' +
+                  country.name +
+                  "</option>"
+              );
+            });
+          },
+          error: function () {
+            alert("Failed to load countries.");
+          },
         });
-        $(".joining_date").flatpickr({
-            altInput: true,
-			altFormat: "F j, Y",
-			dateFormat: "Y-m-d",
+
+        // On country change, load states
+        $("#countrySelect").change(function () {
+          var countryCode = $(this).val();
+          if (countryCode) {
+            $.ajax({
+              url: "data/states.php",
+              type: "GET",
+              dataType: "json",
+              data: { country: countryCode },
+              success: function (data) {
+                var $stateSelect = $("#stateSelect");
+                $stateSelect
+                  .empty()
+                  .append('<option value="">Select a state</option>');
+                $.each(data.states, function (i, state) {
+                  $stateSelect.append(
+                    '<option value="' +
+                      state.code +
+                      '">' +
+                      state.name +
+                      "</option>"
+                  );
+                });
+                $stateSelect.prop("disabled", false); // Enable state dropdown
+              },
+              error: function () {
+                alert("Failed to load states.");
+              },
+            });
+          } else {
+            $("#stateSelect")
+              .empty()
+              .append('<option value="">Select a state</option>')
+              .prop("disabled", true);
+            $("#citySelect")
+              .empty()
+              .append('<option value="">Select a city</option>')
+              .prop("disabled", true);
+          }
         });
+
+        // On state change, load cities
+        $("#stateSelect").change(function () {
+          var stateCode = $(this).val();
+          if (stateCode) {
+            $.ajax({
+              url: "data/cities.php",
+              type: "GET",
+              dataType: "json",
+              data: { state: stateCode },
+              success: function (data) {
+                var $citySelect = $("#citySelect");
+                $citySelect
+                  .empty()
+                  .append('<option value="">Select a city</option>');
+                $.each(data.cities, function (i, city) {
+                  $citySelect.append(
+                    '<option value="' +
+                      city.code +
+                      '">' +
+                      city.name +
+                      "</option>"
+                  );
+                });
+                $citySelect.prop("disabled", false); // Enable city dropdown
+              },
+              error: function () {
+                alert("Failed to load cities.");
+              },
+            });
+          } else {
+            $("#citySelect")
+              .empty()
+              .append('<option value="">Select a city</option>')
+              .prop("disabled", true);
+          }
+        });
+      });
     </script>
   </body>
 </html>
