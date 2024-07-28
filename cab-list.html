@@ -769,122 +769,88 @@
 			</div>
 			<!-- start: page body area -->
 			<div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
-                <div class="row g-3">
-					<div class="col-sm-12">
-						<div class="d-flex align-items-center justify-content-between flex-wrap">
-							<h3 class="fw-bold mb-0">Cab List</h3>
-							<div class="col-auto d-flex w-sm-100">
-								<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#add-items">Add Cab</button>
-							</div>
-						</div>
+				<div class="row g-3">
+				  <div class="col-sm-12">
+					<div
+					  class="d-flex align-items-center justify-content-between flex-wrap"
+					>
+					  <h3 class="fw-bold mb-0">Booking Details</h3>
+					  <div class="col-auto d-flex w-sm-100">
+						<a href="create-customer.html">
+						  <button
+							type="button"
+							class="btn btn-dark btn-set-task w-sm-100"
+						  >
+							Add Booking
+						  </button></a
+						>
+					  </div>
+					</div>
 				  </div>
-                  <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <table class="table dataTable align-middle table-hover table-body" style="width: 100%;">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-											<th>Car</th>
-											<th>Car Number</th>
-											<th>Car Type</th>
-											<th>Fuel Type</th>
-											<th>Seat Capacity</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-										<tr>
-											<td>01</td>
-											<td>Innova</td>
-											<td>AB-GB-0158</td>
-											<td>MPV</td>
-											<td>Disel</td>
-											<td>8</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>02</td>
-											<td>XUV 700</td>
-											<td>AB-GB-1158</td>
-											<td>SUV</td>
-											<td>Disel</td>
-											<td>5</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>03</td>
-											<td>Maruti 800</td>
-											<td>AB-GB-5511</td>
-											<td>Sedan</td>
-											<td>Petrol</td>
-											<td>4</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>04</td>
-											<td>Hyundai Verna</td>
-											<td>AB-GB-7711</td>
-											<td>Sedan</td>
-											<td>Petrol</td>
-											<td>4</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>05</td>
-											<td>Maruti Dzire</td>
-											<td>AB-GB-9911</td>
-											<td>Sedan</td>
-											<td>Petrol</td>
-											<td>4</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>06</td>
-											<td>Honda Amaze</td>
-											<td>AB-GB-1188</td>
-											<td>Sedan</td>
-											<td>Petrol</td>
-											<td>4</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>07</td>
-											<td>Volkswagen Virtus</td>
-											<td>AB-GB-1112</td>
-											<td>Sedan</td>
-											<td>Petrol</td>
-											<td>5</td>
-											<td>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#edit-items"><i class="bi bi-pencil-square"></i></button>
-												<button type="button" class="btn deleterow"><i class="bi bi-trash text-danger"></i></button>
-											</td>
-										</tr>
-									</tbody>
-                                </table>
-                            </div>
-                        </div>
-                  </div>
-                </div><!-- Row End -->
-			</div>
+				  <div class="col-sm-12">
+					<div class="card">
+					  <div class="card-body">
+						<table
+						  id="myProjectTable"
+						  class="table table-hover align-middle mb-0 w-100"
+						>
+						  <thead>
+							<tr>
+							  <th>Customer Id</th>
+							  <th>Name</th>
+							  <th>Email</th>
+							  <th>Contact</th>
+							  <!-- <th>Status</th> -->
+							  <th>Actions</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>
+								<a href="employee-profile.html" class="text-accent"
+								  >#EMP : 00001</a
+								>
+							  </td>
+							  <td>
+								<img
+								  class="avatar rounded-circle"
+								  src="assets/images/xs/avatar1.jpg"
+								  alt=""
+								/>
+								<span class="fw-bold ms-1">Frank Baker</span>
+							  </td>
+							  <td>CasualLeave@gmail.com</td>
+							  <td>1234567890</td>
+							  <!-- <td>Active</td> -->
+							  <td>
+								<div class="btn-group" role="group">
+								  <button
+									type="button"
+									class="btn btn-outline-secondary"
+									data-bs-toggle="modal"
+									data-bs-target="#editModal"
+								  >
+									<i class="bi bi-pencil-square"></i> Edit
+								  </button>
+								  <button
+									type="button"
+									class="btn btn-outline-secondary deleterow"
+									data-bs-toggle="modal"
+									data-bs-target="#deleteModal"
+								  >
+									<i class="bi bi-trash"></i> Delete
+								  </button>
+								</div>
+							  </td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- Row End -->
+			  </div>
 		</div>  
 
 	</main>

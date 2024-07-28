@@ -8,16 +8,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta
-      name="description"
-      content="Pride Living
-    />
+    <meta name="description" content="Pride Living />
     <meta name="keyword" content="Pride Living" />
 
     <!--[ Favicon]-->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
-    <link rel="stylesheet" href="assets/vendor/dataTables.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
 
     <!--[ Template main css file ]-->
     <link rel="stylesheet" href="assets/css/style.min.css" />
@@ -1926,13 +1930,129 @@
 
     <!--[ hotelair template vender js ]-->
     <script src="assets/bundles/libscripts.bundle.js"></script>
-    <script src="assets/bundles/apexcharts.bundle.js"></script>
-    <script src="assets/bundles/dataTables.bundle.js"></script>
 
     <!-- Template page js -->
     <script src="assets/js/main.js"></script>
-  
-  
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Disable form submissions if there are invalid fields
+      $(function () {
+        $("#disabilitySelect")
+          .change(function () {
+            const isYes = $(this).val() === "yes";
+            $(".disability-description").toggle(isYes);
+            $(".disability-container")
+              .toggleClass("col-md-6", isYes)
+              .toggleClass("col-md-12", !isYes);
+          })
+          .change(); // Trigger change to apply initial state
+      });
+
+      // Country, State, City dropdown
+      $(document).ready(function () {
+        // Load countries
+        $.ajax({
+          url: "data/countries.php",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            var $countrySelect = $("#countrySelect");
+            $countrySelect
+              .empty()
+              .append('<option value="">Select a country</option>');
+            $.each(data.countries, function (i, country) {
+              $countrySelect.append(
+                '<option value="' +
+                  country.code +
+                  '">' +
+                  country.name +
+                  "</option>"
+              );
+            });
+          },
+          error: function () {
+            alert("Failed to load countries.");
+          },
+        });
+
+        // On country change, load states
+        $("#countrySelect").change(function () {
+          var countryCode = $(this).val();
+          if (countryCode) {
+            $.ajax({
+              url: "data/states.php",
+              type: "GET",
+              dataType: "json",
+              data: { country: countryCode },
+              success: function (data) {
+                var $stateSelect = $("#stateSelect");
+                $stateSelect
+                  .empty()
+                  .append('<option value="">Select a state</option>');
+                $.each(data.states, function (i, state) {
+                  $stateSelect.append(
+                    '<option value="' +
+                      state.code +
+                      '">' +
+                      state.name +
+                      "</option>"
+                  );
+                });
+                $stateSelect.prop("disabled", false); // Enable state dropdown
+              },
+              error: function () {
+                alert("Failed to load states.");
+              },
+            });
+          } else {
+            $("#stateSelect")
+              .empty()
+              .append('<option value="">Select a state</option>')
+              .prop("disabled", true);
+            $("#citySelect")
+              .empty()
+              .append('<option value="">Select a city</option>')
+              .prop("disabled", true);
+          }
+        });
+
+        // On state change, load cities
+        $("#stateSelect").change(function () {
+          var stateCode = $(this).val();
+          if (stateCode) {
+            $.ajax({
+              url: "data/cities.php",
+              type: "GET",
+              dataType: "json",
+              data: { state: stateCode },
+              success: function (data) {
+                var $citySelect = $("#citySelect");
+                $citySelect
+                  .empty()
+                  .append('<option value="">Select a city</option>');
+                $.each(data.cities, function (i, city) {
+                  $citySelect.append(
+                    '<option value="' +
+                      city.code +
+                      '">' +
+                      city.name +
+                      "</option>"
+                  );
+                });
+                $citySelect.prop("disabled", false); // Enable city dropdown
+              },
+              error: function () {
+                alert("Failed to load cities.");
+              },
+            });
+          } else {
+            $("#citySelect")
+              .empty()
+              .append('<option value="">Select a city</option>')
+              .prop("disabled", true);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
