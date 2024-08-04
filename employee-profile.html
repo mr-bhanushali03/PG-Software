@@ -15,7 +15,7 @@
     <!--[ Favicon]-->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg" />
 
-	<link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
@@ -2268,39 +2268,144 @@
                   </div>
                 </div>
               </div>
-			  <table class="table table-hover mt-3 table-bordered table-responsive">
-				  <thead>
-					  <tr>
-						  <th>Id</th>
-						  <th>Name</th>
-						  <th>Email</th>
-						  <th>Phone</th>
-						  <th>Address</th>
-						  <th>City</th>
-						  <th>State</th>
-						  <th>Zip</th>
-						  <th>Country</th>
-						  <th>Actions</th>
-					  </tr>
-				  </thead>
-				  <tbody>
-					  <tr>
-						  <td>1</td>
-						  <td>John Doe</td>
-						  <td>test@gmail.com</td>
-						  <td>1234567890</td>
-						  <td>123 Main St</td>
-						  <td>City</td>
-						  <td>State</td>
-						  <td>12345</td>
-						  <td>Country</td>
-						  <td>
-							  <a href="#" class="btn btn-primary">Edit</a>
-							  <a href="#" class="btn btn-danger">Delete</a>
-						  </td>
-					  </tr>
-				  </tbody>
-			  </table>
+              <!-- Payment Details Table -->
+              <div class="col-sm-12 mt-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0">Payment Details</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered dataTable text-center align-middle table-hover table-body"
+                        style="width: 100%"
+                      >
+                        <thead>
+                          <tr>
+                            <th scope="col">Payment ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <a
+                                href="javascript:void(0)"
+                                aria-label="Payment ID #P01"
+                                >#P01</a
+                              >
+                            </td>
+                            <td>John Doe</td>
+                            <td>$150</td>
+                            <td>2021-12-12</td>
+                            <!-- ISO 8601 Date Format -->
+                            <td>
+                              <span class="badge text-bg-success">Paid</span>
+                            </td>
+                            <td>
+                              <div class="btn-group" role="group">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#editModal"
+                                  aria-label="Edit Payment"
+                                >
+                                  <i class="bi bi-pencil-square"></i> Edit
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary deleterow"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                  aria-label="Delete Payment"
+                                >
+                                  <i class="bi bi-trash"></i> Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- Add more rows as needed -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Campaign Details Table -->
+              <div class="col-sm-12 mt-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0">Campaign Details</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered dataTable text-center align-middle table-hover"
+                        style="width: 100%"
+                      >
+                        <thead>
+                          <tr>
+                            <th scope="col">Campaign ID</th>
+                            <th scope="col">Campaign Name</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">End Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <a
+                                href="javascript:void(0)"
+                                aria-label="Campaign ID #C01"
+                                >#C01</a
+                              >
+                            </td>
+                            <td>Summer Sale</td>
+                            <td>$2000</td>
+                            <td>2024-06-01</td>
+                            <!-- ISO 8601 Date Format -->
+                            <td>2024-08-31</td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>
+                              <div class="btn-group" role="group">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#editModal"
+                                  aria-label="Edit Campaign"
+                                >
+                                  <i class="bi bi-pencil-square"></i> Edit
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary deleterow"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                  aria-label="Delete Campaign"
+                                >
+                                  <i class="bi bi-trash"></i> Delete
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- Add more rows as needed -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

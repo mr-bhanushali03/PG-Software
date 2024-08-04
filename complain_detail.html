@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pride Living</title>
+    <title>Pride Living : Complain Detail</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta
-      name="description"
-      content="Pride Living
-    />
+    <meta name="description" content="Pride Living>
     <meta name="keyword" content="Pride Living" />
 
     <!--[ Favicon]-->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg" />
-
-    <link rel="stylesheet" href="assets/vendor/dataTables.min.css" />
 
     <!--[ Template main css file ]-->
     <link rel="stylesheet" href="assets/css/style.min.css" />
@@ -54,7 +49,7 @@
                   alt="avatar"
                 />
                 <div class="ms-3 mt-1">
-                  <h4 class="mb-0 text-gradient title-font">Pride Living</h4>
+                  <h4 class="mb-0 text-gradient title-font">Anny glover</h4>
                   <span class="text-muted">Super Admin</span>
                 </div>
               </div>
@@ -66,7 +61,7 @@
               >
                 <li class="nav-item" role="presentation">
                   <a
-                    class="ps-2 pe-3 nav-link active"
+                    class="ps-2 pe-3 nav-link"
                     data-bs-toggle="tab"
                     href="#tab_hotels"
                     role="tab"
@@ -87,7 +82,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <a
-                    class="ps-2 pe-3 nav-link"
+                    class="ps-2 pe-3 nav-link active"
                     data-bs-toggle="tab"
                     href="#tab_settings"
                     role="tab"
@@ -100,11 +95,7 @@
               <!-- start: Menu content -->
               <div class="tab-content">
                 <!-- start: Hotel tab-->
-                <div
-                  class="tab-pane fade active show"
-                  id="tab_hotels"
-                  role="tabpanel"
-                >
+                <div class="tab-pane fade" id="tab_hotels" role="tabpanel">
                   <h6
                     class="fl-title title-font ps-2 small text-uppercase text-muted"
                     style="--dynamic-color: var(--theme-color1)"
@@ -354,7 +345,7 @@
                       <a
                         href="#CarbookingMenu"
                         data-bs-toggle="collapse"
-                        aria-expanded="true"
+                        aria-expanded="false"
                         class="dropdown-toggle"
                         aria-label="Users"
                       >
@@ -377,10 +368,7 @@
                         </svg>
                         <span class="mx-3">Cab Facility</span>
                       </a>
-                      <ul
-                        class="collapse list-unstyled show"
-                        id="CarbookingMenu"
-                      >
+                      <ul class="collapse list-unstyled" id="CarbookingMenu">
                         <li>
                           <a href="cab-list.html" aria-label="Cab Details"
                             >Cab List</a
@@ -388,7 +376,6 @@
                         </li>
                         <li>
                           <a
-                            class="active"
                             href="customer-booking.html"
                             aria-label="Cab Booking"
                             >Cab Booking</a
@@ -823,7 +810,11 @@
                   </ul>
                 </div>
                 <!-- start: Setting tab-->
-                <div class="tab-pane fade" id="tab_settings" role="tabpanel">
+                <div
+                  class="tab-pane fade active show"
+                  id="tab_settings"
+                  role="tabpanel"
+                >
                   <h6
                     class="fl-title title-font ps-2 small text-uppercase text-muted"
                     style="--dynamic-color: var(--theme-color1)"
@@ -853,7 +844,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="common-settings.html" aria-label="payment set">
+                      <a
+                        class="active"
+                        href="common-settings.html"
+                        aria-label="payment set"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           class="svg-stroke"
@@ -1255,24 +1250,70 @@
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  viewBox="0 0 32 32"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+                  <!-- Define gradients -->
+                  <defs>
+                    <!-- Gradient for the text -->
+                    <linearGradient
+                      id="textGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #8057c7; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #e05170; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                    <!-- Gradient for the box border -->
+                    <linearGradient
+                      id="borderGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #8057c7; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #e05170; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Square box with gradient border -->
+                  <rect
+                    x="1"
+                    y="1"
+                    width="30"
+                    height="30"
+                    rx="5"
+                    ry="5"
+                    fill="none"
+                    stroke="url(#borderGradient)"
+                    stroke-width="2"
                   />
-                  <path d="M9 8l0 8" />
-                  <path d="M9 12l6 0" />
-                  <path d="M15 8l0 8" />
+
+                  <!-- Apply the gradient to the text -->
+                  <text
+                    x="6"
+                    y="22"
+                    font-family="Arial, Helvetica, sans-serif"
+                    font-size="16"
+                    fill="url(#textGradient)"
+                  >
+                    PL
+                  </text>
                 </svg>
-                <span
-                  class="fw-bold ps-2 fs-5 d-none d-xl-inline-flex text-gradient"
-                  >HotelAir</span
-                >
               </a>
             </div>
             <form
@@ -1961,218 +2002,81 @@
         <div class="px-xl-5 px-lg-4 px-3 py-2 page-header">
           <ol class="breadcrumb mb-0 bg-transparent">
             <li class="breadcrumb-item">
-              <a href="index.html" title="home">Home</a>
+              <a href="tuning.html" title="home">Home</a>
             </li>
             <li
               class="breadcrumb-item active"
               aria-current="page"
-              title="Cab Booking"
+              title="Common Settings"
             >
-              Check-In Details
+              Complain Detail
             </li>
           </ol>
-          <!-- <ul class="list-unstyled action d-flex align-items-center mb-0">
-					<li class="dropdown">
-						<a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-							<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-								<path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
-								<path d="M9 12l6 0"></path>
-								<path d="M12 9l0 6"></path>
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4">
-							<li><a class="dropdown-item rounded-pill" href="#">New folder</a></li>
-							<li><a class="dropdown-item rounded-pill" href="#">File upload</a></li>
-							<li><a class="dropdown-item rounded-pill" href="#">Google docs</a></li>
-							<li><a class="dropdown-item rounded-pill" href="#">Google sheets</a></li>
-							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item rounded-pill" href="#">+ Invite</a></li>
-							<li><a class="dropdown-item rounded-pill" href="#">Generate report</a></li>
-							<li><a class="dropdown-item rounded-pill" href="#">New Reports</a></li>
-						</ul>
-					</li>
-					<li class="dropdown ms-3">
-						<a href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-							<svg class="svg-stroke" xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-								<path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"></path>
-							</svg>
-						</a>
-						<div class="dropdown-menu dropdown-menu-end p-2 p-xl-3 shadow rounded-4" style="width: 300px;">
-							<h6>Filter Options</h6>
-							<div class="row g-3 mt-3">
-								<div class="col-12">
-									<label class="form-label small text-muted">Sorted by:</label>
-									<input type="search" class="form-control" placeholder="Search">
-								</div>
-								<div class="col-12">
-									<label class="form-label small text-muted">Status:</label>
-									<select class="form-select">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
-								<div class="col-12">
-									<label class="form-label small text-muted">Notifications:</label>
-									<div class="form-check form-switch">
-										<input class="form-check-input" type="checkbox" role="switch">
-										<label class="form-check-label">Enabled</label>
-									</div>
-								</div>
-								<div class="col-12 text-end mt-4">
-									<button type="reset" class="btn btn-sm btn-light me-1">Reset</button>
-									<button type="submit" class="btn btn-sm btn-primary">Apply</button>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul> -->
         </div>
         <!-- start: page body area -->
         <div class="px-xl-5 px-lg-4 px-3 py-3 page-body">
-          <div class="row g-3">
+          <div class="row mb-3">
             <div class="col-sm-12">
               <div
                 class="d-flex align-items-center justify-content-between flex-wrap"
               >
-                <h3 class="fw-bold mb-0">Check-In Details</h3>
-                <div class="col-auto d-flex w-sm-100">
-                  <a href="customer-create.html">
-                    <button
-                      type="button"
-                      class="btn btn-dark btn-set-task w-sm-100"
-                    >
-                      Add Customer Booking
-                    </button></a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title">Search Reports Here</h6>
-                </div>
-                <div class="card-body">
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-label text-muted">From <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text" ><i class="bi bi-calendar-plus"></i></span>
-                          <input type="date" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-label text-muted">To<span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text" ><i class="bi bi-calendar-minus"></i></span>
-                          <input type="date" name="datefilter" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-label text-muted">Booking Status</label>
-                        <div class="input-group">
-                          <span class="input-group-text" ><i class="bi bi-house"></i></span>
-                          <select class="form-select">
-                            <option selected>Find Booking Status</option>
-                            <option value="1">Pendding</option>
-                            <option value="2">Cancle</option>
-                            <option value="3">Check In</option>
-                            <option value="4">Check Out</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-label text-muted">Payment Status</label>
-                        <div class="input-group">
-                          <span class="input-group-text" ><i class="bi bi-cash"></i></span>
-                          <select class="form-select">
-                            <option selected>Find Payment Status</option>
-                            <option value="1">Pendding</option>
-                            <option value="2">Cancle</option>
-                            <option value="3">Complete</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 text-end">
-                      <button type="button" class="btn btn-primary py-2 px-5">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <div class="card">
-                <div class="card-body">
-                  <table
-                    id="myProjectTable"
-                    class="table table-hover align-middle mb-0 w-100"
-                  >
-                    <thead>
-                      <tr>
-                        <th>Customer Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <!-- <th>Status</th> -->
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <a href="employee-profile.html" class="text-accent"
-                            >#EMP : 00001</a
-                          >
-                        </td>
-                        <td>
-                          <img
-                            class="avatar rounded-circle"
-                            src="assets/images/xs/avatar1.jpg"
-                            alt=""
-                          />
-                          <span class="fw-bold ms-1">Frank Baker</span>
-                        </td>
-                        <td>CasualLeave@gmail.com</td>
-                        <td>1234567890</td>
-                        <!-- <td>Active</td> -->
-                        <td>
-                          <div class="btn-group" role="group">
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#editModal"
-                            >
-                              <i class="bi bi-pencil-square"></i> Edit
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary deleterow"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash"></i> Delete
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h3 class="fw-bold mb-0">Complain Detail</h3>
               </div>
             </div>
           </div>
-          <!-- Row End -->
+          <div class="card border-0 mb-3">
+            <div class="card-header">
+              <h6 class="card-title mb-0">Complain Detail</h6>
+            </div>
+            <div class="card-body pt-0">
+              <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="col-form-label">Complain ID</label>
+                        <input type="text" class="form-control" readonly disabled/>
+                        </div>
+                  <div class="col-md-6">
+                    <label class="col-form-label">Name</label>
+                    <input type="text" class="form-control" readonly disabled/>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="col-form-label">Email</label>
+                    <input type="email" class="form-control" readonly disabled/>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="col-form-label">Contact</label>
+                    <input type="number" class="form-control" readonly disabled/>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="col-form-label">Complain Type</label>
+                        <input type="text" name="complain_type" class="form-control" readonly disabled/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-form-label">Status</label>
+                    <select class="form-select" name="status">
+                    <option value="1">Pending</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Resolved</option>
+                    </select>
+                </div>
+                  <div class="col-md-12">
+                    <label class="col-form-label">Description</label>
+                    <textarea class="form-control" rows="4" readonly disabled></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary mt-2">
+                      Back
+                    </button>
+                    <button type="submit" class="btn btn-primary mt-2">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -2305,6 +2209,10 @@
               >Monochrome Mode</label
             >
           </div>
+          <!-- <div class="form-check form-switch gradient-active">
+					<input class="form-check-input fs-6" type="checkbox" role="switch" id="gradient-active">
+					<label class="form-check-label" for="gradient-active">Gradient Active</label>
+				</div> -->
           <div class="form-check form-switch radius-toggle">
             <input
               class="form-check-input fs-6"
@@ -2350,94 +2258,12 @@
       </div>
     </div>
 
-    <!-- Edit Booking-->
-    <div class="modal fade" id="edit-booking" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">Edit Cab Booking</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Car</label>
-                <select class="form-select">
-                  <option selected>Innova</option>
-                  <option value="1">Innova</option>
-                  <option value="2">XUV 700</option>
-                  <option value="3">Maruti 800</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Customer Name</label>
-                <select class="form-select">
-                  <option selected>Jemmy</option>
-                  <option value="1">Jemmy</option>
-                  <option value="2">Max</option>
-                  <option value="3">Eden</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Cab Number</label>
-                <select class="form-select">
-                  <option selected>AB-GB-0158</option>
-                  <option value="1">AB-GB-0158</option>
-                  <option value="2">AB-GB-1158</option>
-                  <option value="3">AB-GB-1111</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Driver</label>
-                <input type="text" class="form-control" value="Max" />
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Transportation Type</label>
-                <select class="form-select">
-                  <option selected>Pick Up</option>
-                  <option value="1">Pick Up</option>
-                  <option value="2">Drop</option>
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label text-muted">Transportation Time</label>
-                <input type="time" class="form-control" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">
-              Update changes
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!--[ hotelair template vender js ]-->
     <script src="assets/bundles/libscripts.bundle.js"></script>
-    <script src="assets/bundles/dataTables.bundle.js"></script>
 
     <!-- Template page js -->
     <script src="assets/js/main.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#myProjectTable").addClass("nowrap").dataTable({
-          responsive: true,
-        });
-      });
-    </script>
   </body>
+
+  <!-- Mirrored from pixelwibes.in/templates/hotelair/html/common-settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 16:17:21 GMT -->
 </html>
